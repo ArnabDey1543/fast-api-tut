@@ -28,3 +28,7 @@ def get_student(name:str):
         if students[student_id]["name"] == name:
             return students[student_id]
     return {"Data":"Not Found"}
+
+@app.get("/get-id/{id}/comments")
+def get_id(id:int):
+    return {"data": {id*5, id*7}}
